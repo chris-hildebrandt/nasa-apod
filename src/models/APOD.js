@@ -1,5 +1,5 @@
-export class APOD{
-  constructor(data){
+export class APOD {
+  constructor(data) {
     this.copyright = data.copyright
     this.date = data.date
     this.explanation = data.explanation
