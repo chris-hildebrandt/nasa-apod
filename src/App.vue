@@ -1,9 +1,5 @@
 <template>
-  <header>
-    <Navbar />
-  </header>
-  <main class="container-fluid">
-
+  <main class="container-fluid bg-dark">
     <router-view />
   </main>
   <!-- placing the modal here makes it available on every page! -->

@@ -12,3 +12,12 @@ export const APODApi = Axios.create({
     api_key: 'QShafLJ9D3b3cNUdHe4dPcilGD9moeVSAQ7TLDKQ'
   }
 })
+
+// export const APODApi = Axios.create({
+//   baseURL: 'https://bcw-getter.herokuapp.com',
+//   timeout: 4000,
+//   params: {
+//     url: 'https://api.nasa.gov/planetary/apod',
+//     api_key: 'QShafLJ9D3b3cNUdHe4dPcilGD9moeVSAQ7TLDKQ'
+//   }
+// })

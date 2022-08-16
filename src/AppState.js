@@ -1,7 +1,7 @@
 import { reactive } from 'vue'
-import { APOD } from "./models/APOD.js"
 
 // NOTE AppState is a reactive object to contain app level data
+const date = new Date()
 export const AppState = reactive({
   user: {},
 
@@ -10,5 +10,5 @@ export const AppState = reactive({
   /**@type {import('./models/APOD.js').APOD} */
   APOD: null,
 
-  date: new Date()
+  date: date.toISOString().split('T')[0]
 })

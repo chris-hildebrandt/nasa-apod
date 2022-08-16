@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page" :img="APOD.img"></div>
+  <div class="home-page" :style="{backgroundImage: `url(${APOD?.img})`}"></div>
   <!-- <button @click="getSomething">Get Something</button>
   <div class="" v-for="s in something" :key="s.id"></div> -->
   <!--                        ^^^ this name (typically the plural) matches the object/array in the appstate -->
@@ -10,6 +10,7 @@
 
 <script>
 import { computed, onMounted } from '@vue/runtime-core';
+import { apodService } from '../services/APODService.js'
 import { logger } from '../utils/Logger.js';
 import { AppState } from "../AppState.js";
 import Pop from "../utils/Pop.js";
@@ -17,9 +18,9 @@ import Pop from "../utils/Pop.js";
 export default {
   setup(){
   // private functions
-    async function getAPOD(date){
+    async function getAPOD(){
       try {
-      await APODService.getAPOD(date)
+      await apodService.getAPOD()
       } catch (error) {
       logger.error('[]', error)
       Pop.error(error)
@@ -51,4 +52,9 @@ export default {
 
 <style scoped lang="scss">
 //        V   this stuff needs to go away when rewriting the homepage layout
+
+.home-page{
+  height: 100vh
+  // height: calc(100vh - 60px);
+}
 </style>

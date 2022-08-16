@@ -53,4 +53,7 @@ a:hover {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
+.navbar{
+  height: 60px;
+}
 </style>
