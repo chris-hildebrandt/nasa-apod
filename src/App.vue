@@ -10,6 +10,7 @@
       Made with 💖 by CodeWorks
     </div>
   </footer>
+  <!-- placing the modal here makes it available on every page! -->
 </template>
 
 <script>
